@@ -2,7 +2,7 @@
   "name": "watercal",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kewkong.github.io/homework-day21/",
+  "homepage": "https://kewkong.github.io/homework-day21",
   "type": "module",
   "scripts": {
     "dev": "vite",

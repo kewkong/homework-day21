@@ -1,0 +1,58 @@
+
+.form-control {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin: 5px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* สไตล์สำหรับการ์ด */
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px; /* มุมโค้งมน */
+  padding: 15px;
+  box-shadow: var(--shadow); /* ใช้เงาจากตัวแปรที่คุณสร้างไว้ */
+  
+  /* เพิ่ม Transition เพื่อให้เวลาสลับโหมด หรือชี้เมาส์ดูนุ่มนวล */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* เอฟเฟกต์ตอนนำเมาส์ไปวางเหนือการ์ด (Hover) */
+.card:hover {
+  transform: translateY(-4px); /* ยกการ์ดลอยขึ้นเล็กน้อย */
+  border-color: var(--accent-border); /* เปลี่ยนสีขอบเป็นสี Accent แบบโปร่งใส */
+  box-shadow: var(--accent-bg) 0 10px 20px -5px; /* เปลี่ยนเงาให้มีสีจางๆ ของธีม */
+}
+
+/* ปรับให้การ์ดเล็กลงเล็กน้อยในหน้าจอมือถือ */
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column; /* เรียงการ์ดจากบนลงล่าง */
+  gap: 24px; /* ระยะห่างระหว่างการ์ดแต่ละใบ */
+  padding: 32px 20px;
+  max-width: 600px; /* กำหนดความกว้างสูงสุดของการ์ดไม่ให้กว้างเกินไป */
+  margin: 0 auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+}
+
+h1{
+  padding: 15px;
+}
